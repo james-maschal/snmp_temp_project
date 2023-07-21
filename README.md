@@ -1,7 +1,6 @@
 # SNMP_temp_project
 This project is designed to collect inlet sensor temperature levels
-for storage and querying for high temp IDFs. It references a list
-of inlet sensor for each switch, updated every 30 days.
+for storage and querying for high temp IDFs.
 All data gets exported to a database for later retrieval.
 
 NOTE - main.py will need to be updated with your directory for config file import.
