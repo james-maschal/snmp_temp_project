@@ -20,7 +20,7 @@ def main():
     """Main logic."""
 
     config = configparser.ConfigParser()
-    config.read("/home/netmaschal/python/snmp_temp_project/info.ini")
+    config.read("/[YOUR DIRECTORY HERE]/snmp_temp_project/info.ini")
     config_v = {
         "log_path"      : str(config["file_path"]["log_path"]),
         "temp_path"     : str(config["file_path"]["temp_path"]),
@@ -136,8 +136,7 @@ def date_check(config, config_v):
     was ran. If it was within 30 days, a report
     is not run."""
 
-    config.read("/home/netmaschal/python/snmp_temp_project/"
-                "index_names/last_ran.ini")
+    config.read(config_v["last_ran_path"])
 
     try:
         date = {
