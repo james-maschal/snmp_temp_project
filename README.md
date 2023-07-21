@@ -7,7 +7,6 @@ All data gets exported to a database for later retrieval.
 NOTE - main.py will need to be updated with your directory for config file import.
 
 ## Stage 1 - Index Report
-- The first thing this program does is check a file named "last_ran.ini" for the date of last index_report creation. If it has been more than 30 days, or if the file doesn't exist, It runs the index_report creation script.
 - This script gathers an snmp sensor inventory table for every switch in the "interface_buildings" function from cisco_devices.py. It then filters for sensors labeled "nlet" (to find inlet sensors). It then further filters out sensors from Slots 2 or higher. The last section of the OID returned is used as the reference index for each sensor moving forward.(**See [ciscoEnvMonTemperatureStatusTable](https://snmp.cloudapps.cisco.com/Support/SNMP/do/BrowseOID.do?objectInput=1.3.6.1.4.1.9.9.13.1.3&translate=Translate)**)
 - Everything is exported into index_report.json file for importing later.
 

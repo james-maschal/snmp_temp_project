@@ -131,26 +131,5 @@ def err_check(err, log_path, ini_path, err_text):
 
 
 
-def date_check(config, config_v):
-    """Checks to see when the last index report
-    was ran. If it was within 30 days, a report
-    is not run."""
-
-    config.read(config_v["last_ran_path"])
-
-    try:
-        date = {
-            'last_ran' : config["run_date"]["date"]
-            }
-
-        date_report = index_report.file_check(date, config_v)
-
-    except KeyError:
-        date_report = True
-
-    return date_report
-
-
-
 if __name__ == "__main__":
     main()

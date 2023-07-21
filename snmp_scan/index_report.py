@@ -3,34 +3,11 @@ This report contains temperature sensor to be polled,
 and Switch name.
 """
 
-import os
 import datetime
 import configparser
 import json
 from jns_snmp_connect import snmp_connect
 from snmp_scan import dict_create
-
-
-def file_check(date, config):
-    """Checks the difference between recorded date of last runtime.
-    If it's been over 30 days, another index report will be initiated.
-    """
-
-    path_name = config["index_path"]
-    path_state = os.path.exists(path_name)
-
-    if not path_state:
-        return True
-
-    now = datetime.datetime.now()
-    then = datetime.datetime.strptime(date["last_ran"], '%Y-%m-%d %H:%M:%S.%f')
-    delta = now - then
-
-    if delta > datetime.timedelta(days=30):
-        return True
-
-    return None
-
 
 
 def index(buildings, config):
