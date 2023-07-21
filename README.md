@@ -4,6 +4,7 @@ for storage and querying for high temp IDFs. It references a list
 of inlet sensor for each switch, updated every 30 days.
 All data gets exported to a database for later retrieval.
 
+NOTE - main.py will need to be updated with your directory for config file import.
 
 ## Stage 1 - Index Report
 - The first thing this program does is check a file named "last_ran.ini" for the date of last index_report creation. If it has been more than 30 days, or if the file doesn't exist, It runs the index_report creation script. 
