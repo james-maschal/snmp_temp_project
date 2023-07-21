@@ -3,6 +3,7 @@ This report contains temperature sensor to be polled,
 and Switch name.
 """
 
+import os
 import datetime
 import configparser
 import json
@@ -73,6 +74,12 @@ def index_json(index_report, config, log_text):
     """
 
     json_obj = json.dumps(index_report, indent=4)
+
+    path_name = config["index_dir"]
+    path_state = os.path.exists(path_name)
+
+    if not path_state:
+        os.makedirs(config["index_dir"])
 
     with open(config["index_path"], 'w', encoding="UTF-8") as draft:
         print(json_obj, file=draft)

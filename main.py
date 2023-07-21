@@ -15,16 +15,16 @@ from sql_temperature import index_table
 from sql_temperature import final_table
 
 
-
 def main():
     """Main logic."""
 
     config = configparser.ConfigParser()
-    config.read("/[YOUR DIRECTORY HERE]/snmp_temp_project/info.ini")
+    config.read("/home/netmaschal/python/snmp_temp_project/info.ini")
     config_v = {
         "log_path"      : str(config["file_path"]["log_path"]),
         "temp_path"     : str(config["file_path"]["temp_path"]),
         "index_path"    : str(config["file_path"]["index_path"]),
+        "index_dir"     : str(config["file_path"]["index_dir"]),
         "last_ran_path" : str(config["file_path"]["last_ran_path"]),
         "server_passwd" : str(config["sql_user"]["pass"]),
         "server_user"   : str(config["sql_user"]["name"]),

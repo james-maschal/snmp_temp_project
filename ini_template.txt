@@ -1,8 +1,9 @@
 [file_path]
-last_ran_path = [PATH/TO/PROJECT]/snmp_temp_project/index_names/last_ran.ini
-index_path = [PATH/TO/PROJECT]/snmp_temp_project/index_names/index_report.json
-temp_path = [PATH/TO/PROJECT]/snmp_temp_project/index_names/temp_levels.json
-log_path = [PATH/TO/PROJECT]/temp_log.txt
+index_dir = /[YOUR DIRECTORY HERE]/snmp_temp_project/index_names/
+last_ran_path = /[YOUR DIRECTORY HERE]/snmp_temp_project/index_names/last_ran.ini
+index_path = /[YOUR DIRECTORY HERE]/snmp_temp_project/index_names/index_report.json
+temp_path = /[YOUR DIRECTORY HERE]/snmp_temp_project/index_names/temp_levels.json
+log_path = /[YOUR DIRECTORY HERE]/temp_log.txt
 
 [oid]
 c_string = [SNMP COMMUNITY STRING]
